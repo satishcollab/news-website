@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global News Hub - Latest News in 120 Words</title>
+    <meta name="description" content="Get the latest global and local news summarized in 120 words. Stay informed with concise, accurate news coverage.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-globe"></i>
+                    <span>Global News Hub</span>
+                </div>
+                <div class="nav-menu">
+                    <button class="nav-toggle" id="navToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-links">
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#global">Global</a></li>
+                        <li><a href="#local">Local</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section id="home" class="hero-section">
+            <div class="container">
+                <h1 class="hero-title">Stay Informed in 120 Words</h1>
+                <p class="hero-subtitle">Get the latest global and local news, summarized for quick reading</p>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search for news..." class="search-input">
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Latest News</h2>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="global">Global</button>
+                        <button class="filter-btn" data-filter="local">Local</button>
+                    </div>
+                </div>
+                
+                <div class="news-grid" id="newsGrid">
+                    <!-- News articles will be dynamically loaded here -->
+                </div>
+                
+                <div class="load-more-container">
+                    <button class="load-more-btn" id="loadMoreBtn">Load More News</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About Global News Hub</h2>
+                <p>We deliver concise, accurate news summaries in exactly 120 words, covering both global events and local stories. Our mission is to keep you informed without overwhelming you with unnecessary details.</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-clock"></i>
+                        <h3>Quick Reads</h3>
+                        <p>All news in 120 words or less</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-globe-americas"></i>
+                        <h3>Global Coverage</h3>
+                        <p>Worldwide news and local stories</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Verified Sources</h3>
+                        <p>Reliable and accurate information</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Global News Hub</h3>
+                    <p>Your source for concise, accurate news coverage.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#global">Global News</a></li>
+                        <li><a href="#local">Local News</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Global News Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
