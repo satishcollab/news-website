@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global News Hub - Latest News in 120 Words</title>
+    <meta name="description" content="Get the latest global and local news summarized in 120 words. Stay informed with concise, accurate news coverage.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-globe"></i>
+                    <span data-translate="site-title">Global News Hub</span>
+                </div>
+                <div class="nav-menu">
+                    <div class="nav-controls">
+                        <!-- Language Selector -->
+                        <div class="language-selector">
+                            <select id="languageSelect" class="language-select">
+                                <option value="en">🇺🇸 English</option>
+                                <option value="hi">🇮🇳 हिंदी</option>
+                                <option value="mr">🇮🇳 मराठी</option>
+                                <option value="bn">🇮🇳 বাংলা</option>
+                                <option value="ta">🇮🇳 தமிழ்</option>
+                                <option value="te">🇮🇳 తెలుగు</option>
+                                <option value="kn">🇮🇳 ಕನ್ನಡ</option>
+                                <option value="or">🇮🇳 ଓଡ଼ିଆ</option>
+                                <option value="as">🇮🇳 অসমীয়া</option>
+                                <option value="zh">🇨🇳 中文</option>
+                                <option value="es">🇪🇸 Español</option>
+                                <option value="fr">🇫🇷 Français</option>
+                                <option value="de">🇩🇪 Deutsch</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Dark Mode Toggle -->
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        
+                        <button class="nav-toggle" id="navToggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                    
+                    <ul class="nav-links">
+                        <li><a href="#home" class="active" data-translate="nav-home">Home</a></li>
+                        <li><a href="#global" data-translate="nav-global">Global</a></li>
+                        <li><a href="#local" data-translate="nav-local">Local</a></li>
+                        <li><a href="#about" data-translate="nav-about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section id="home" class="hero-section">
+            <div class="container">
+                <h1 class="hero-title" data-translate="hero-title">Stay Informed in 120 Words</h1>
+                <p class="hero-subtitle" data-translate="hero-subtitle">Get the latest global and local news, summarized for quick reading</p>
+                <div class="search-container">
+                    <input type="text" id="searchInput" data-translate-placeholder="search-placeholder" placeholder="Search for news..." class="search-input">
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-translate="latest-news">Latest News</h2>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all" data-translate="filter-all">All</button>
+                        <button class="filter-btn" data-filter="global" data-translate="filter-global">Global</button>
+                        <button class="filter-btn" data-filter="local" data-translate="filter-local">Local</button>
+                    </div>
+                </div>
+                
+                <div class="news-grid" id="newsGrid">
+                    <!-- News articles will be dynamically loaded here -->
+                </div>
+                
+                <div class="load-more-container">
+                    <button class="load-more-btn" id="loadMoreBtn" data-translate="load-more">Load More News</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 data-translate="about-title">About Global News Hub</h2>
+                <p data-translate="about-description">We deliver concise, accurate news summaries in exactly 120 words, covering both global events and local stories. Our mission is to keep you informed without overwhelming you with unnecessary details.</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-clock"></i>
+                        <h3 data-translate="feature-quick">Quick Reads</h3>
+                        <p data-translate="feature-quick-desc">All news in 120 words or less</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-globe-americas"></i>
+                        <h3 data-translate="feature-global">Global Coverage</h3>
+                        <p data-translate="feature-global-desc">Worldwide news and local stories</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <h3 data-translate="feature-verified">Verified Sources</h3>
+                        <p data-translate="feature-verified-desc">Reliable and accurate information</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-translate="footer-title">Global News Hub</h3>
+                    <p data-translate="footer-description">Your source for concise, accurate news coverage.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footer-quick-links">Quick Links</h3>
+                    <ul>
+                        <li><a href="#home" data-translate="nav-home">Home</a></li>
+                        <li><a href="#global" data-translate="nav-global">Global News</a></li>
+                        <li><a href="#local" data-translate="nav-local">Local News</a></li>
+                        <li><a href="#about" data-translate="nav-about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footer-connect">Connect</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Global News Hub. <span data-translate="footer-rights">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
